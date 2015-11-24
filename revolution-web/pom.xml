@@ -218,7 +218,7 @@
                     <migrationSqlOutputFile>src/test/resources/liquibase/octopus-sql.xml</migrationSqlOutputFile>-->
 
                     <driver>org.h2.Driver</driver>
-                    <url>jdbc:h2:file:./target/h2/octopus</url>
+                    <url>jdbc:h2:file:./target/database/h2/revolution</url>
                     <username>sa</username>
                     <password>sa</password>
                 </configuration>
@@ -229,7 +229,7 @@
                             <!-- <goal>generateChangeLog</goal>
                             <goal>updateSQL</goal> -->
                             <!--<goal>update</goal>-->
-                           <!-- <goal>update</goal>-->
+                            <goal>update</goal>
                         </goals>
                     </execution>
                 </executions>

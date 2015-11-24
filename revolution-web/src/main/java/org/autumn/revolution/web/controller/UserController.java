@@ -1,11 +1,13 @@
 package org.autumn.revolution.web.controller;
 
 import org.autumn.revolution.web.entity.User;
+import org.autumn.revolution.web.service.UserService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,9 @@ import java.util.List;
 @RestController
 @RequestMapping(value="/user")
 public class UserController {
+
+    @Resource
+    private UserService userService;
 
     @RequestMapping(value = "",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> getUserList(){
@@ -29,5 +34,13 @@ public class UserController {
         user2.setUsername("huang");
         list.add(user2);
         return list;
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public void insertUser(){
+        User user = new User();
+        user.setId("1001");
+        user.setUsername("yang");
+        userService.insertUser(user);
     }
 }
