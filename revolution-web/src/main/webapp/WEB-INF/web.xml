@@ -47,7 +47,7 @@
 
 
 
-	<!--<listener>
+	<listener>
 		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
 	</listener>
 
@@ -61,7 +61,8 @@
 	</context-param>
 	<listener>
 		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-	</listener>-->
+	</listener>
+
 
 	<welcome-file-list>
 		<welcome-file></welcome-file>

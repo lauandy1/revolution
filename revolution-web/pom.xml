@@ -229,7 +229,7 @@
                             <!-- <goal>generateChangeLog</goal>
                             <goal>updateSQL</goal> -->
                             <!--<goal>update</goal>-->
-                            <goal>update</goal>
+                           <!-- <goal>update</goal>-->
                         </goals>
                     </execution>
                 </executions>

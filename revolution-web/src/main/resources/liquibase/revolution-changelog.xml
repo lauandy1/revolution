@@ -9,6 +9,6 @@
 
     <property name="now" value="sysdate" dbms="h2"/>
 
-    <!--<include file="liquibase/changelog/revolution-init-changelog.xml" />-->
-    <include file="src/main/resources/liquibase/changelog/revolution-init-changelog.xml" />
+    <include file="liquibase/changelog/revolution-init-changelog.xml" />
+   <!-- <include file="src/main/resources/liquibase/changelog/revolution-init-changelog.xml" />-->
 </databaseChangeLog>
