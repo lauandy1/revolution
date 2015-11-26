@@ -7,7 +7,7 @@
         <result property="username" column="username"/>
     </resultMap>
 
-    <insert id="insertUser" parameterType="User">
+    <insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO t_user (id,username) VALUES (#{id},#{username})
     </insert>
 

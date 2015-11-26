@@ -5,14 +5,14 @@ package org.autumn.revolution.web.entity;
  */
 public class User {
 
-    private String id;
+    private long id;
     private String username;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
     }
 

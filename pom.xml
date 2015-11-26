@@ -37,6 +37,7 @@
 		<jedis.version>2.6.2</jedis.version>
 		<zookeeper.version>3.4.6</zookeeper.version>
 
+
 		<commons.lang3.version>3.3.2</commons.lang3.version>
 		<guava.version>18.0</guava.version>
 

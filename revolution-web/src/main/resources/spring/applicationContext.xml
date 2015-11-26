@@ -26,10 +26,14 @@
     </context:component-scan>
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="org.h2.Driver" />
+       <!-- <property name="driverClassName" value="org.h2.Driver" />
         <property name="url" value="jdbc:h2:file:./target/database/h2/revolution;AUTO_SERVER=TRUE"/>
         <property name="username" value="sa"/>
-        <property name="password" value="sa"/>
+        <property name="password" value="sa"/>-->
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3307/revolution"/>
+        <property name="username" value="root"/>
+        <property name="password" value="root"/>
     </bean>
 
     <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">

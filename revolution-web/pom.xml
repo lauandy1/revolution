@@ -102,6 +102,12 @@
 			<artifactId>h2</artifactId>
 		</dependency>
 
+		<!-- mysql driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
 		<!-- liquibase -->
 		<dependency>
 			<groupId>org.liquibase</groupId>
@@ -229,7 +235,6 @@
 							<!-- <goal>generateChangeLog</goal>
                             <goal>updateSQL</goal> -->
 							<!--<goal>update</goal>-->
-							<goal>update</goal>
 						</goals>
 					</execution>
 				</executions>

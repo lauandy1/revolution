@@ -26,11 +26,11 @@ public class UserController {
 
         List<User> list = new ArrayList<>();
         User user1 = new User();
-        user1.setId("1001");
+        user1.setId(1001);
         user1.setUsername("yang");
         list.add(user1);
         User user2 = new User();
-        user2.setId("1002");
+        user2.setId(1002);
         user2.setUsername("huang");
         list.add(user2);
         return list;
@@ -39,7 +39,7 @@ public class UserController {
     @RequestMapping(value = "", method = RequestMethod.POST)
     public void insertUser(){
         User user = new User();
-        user.setId("1001");
+       // user.setId("1001");
         user.setUsername("yang");
         userService.insertUser(user);
     }
