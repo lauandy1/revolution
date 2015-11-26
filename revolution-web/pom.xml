@@ -108,6 +108,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
+		<!-- c3p0连接池 -->
+		<dependency>
+			<groupId>com.mchange</groupId>
+			<artifactId>c3p0</artifactId>
+		</dependency>
+
 		<!-- liquibase -->
 		<dependency>
 			<groupId>org.liquibase</groupId>
@@ -128,6 +134,10 @@
 			</resource>
 			<resource>
 				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<excludes>
+					<exclude>multiEnvCfg/*</exclude>
+				</excludes>
 			</resource>
 
 			<!-- 输出当前项目的版本号-start -->
@@ -143,6 +153,10 @@
 			</resource>
 			<!-- 输出当前项目的版本号-end -->
 		</resources>
+		<!-- 多环境配置过滤 -->
+		<filters>
+			<filter>${resource.filter}</filter>
+		</filters>
 		<testResources>
 			<testResource>
 				<directory>src/test/java</directory>
@@ -241,7 +255,29 @@
 			</plugin>
 
 		</plugins>
+
+
 	</build>
+
+
+	<!-- 多环境配置,resource.filter属性对应上面定义的filter -->
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<resource.filter>src/main/resources/multiEnvCfg/dev.properties</resource.filter>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<resource.filter>src/main/resources/multiEnvCfg/test.properties</resource.filter>
+			</properties>
+		</profile>
+	</profiles>
 
 
 </project>

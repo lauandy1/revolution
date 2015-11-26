@@ -25,15 +25,30 @@
                                 expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 
-    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-       <!-- <property name="driverClassName" value="org.h2.Driver" />
+   <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+       &lt;!&ndash; <property name="driverClassName" value="org.h2.Driver" />
         <property name="url" value="jdbc:h2:file:./target/database/h2/revolution;AUTO_SERVER=TRUE"/>
         <property name="username" value="sa"/>
-        <property name="password" value="sa"/>-->
+        <property name="password" value="sa"/>&ndash;&gt;
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3307/revolution"/>
         <property name="username" value="root"/>
         <property name="password" value="root"/>
+    </bean>-->
+
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+
+        <property name="minPoolSize" value="5" />
+        <property name="maxPoolSize" value="300" />
+        <property name="initialPoolSize" value="5" />
+        <property name="maxIdleTime" value="30" />
+        <property name="acquireIncrement" value="3" />
+        <property name="acquireRetryAttempts" value="10" />
+        <property name="acquireRetryDelay" value="1000" />
     </bean>
 
     <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
