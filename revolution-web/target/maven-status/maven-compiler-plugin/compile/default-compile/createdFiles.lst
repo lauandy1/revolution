@@ -1,0 +1,4 @@
+org\autumn\revolution\web\controller\UserController.class
+org\autumn\revolution\web\entity\User.class
+org\autumn\revolution\web\dao\UserDao.class
+org\autumn\revolution\web\service\UserService.class

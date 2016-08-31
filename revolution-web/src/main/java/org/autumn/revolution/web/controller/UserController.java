@@ -43,4 +43,10 @@ public class UserController {
         user.setUsername("yang");
         userService.insertUser(user);
     }
+
+
+    @RequestMapping(value = "/transaction",method = RequestMethod.GET,produces = MediaType.APPLICATION_JSON_VALUE)
+    public void getUserTransaction(){
+        userService.testTransaction();
+    }
 }
