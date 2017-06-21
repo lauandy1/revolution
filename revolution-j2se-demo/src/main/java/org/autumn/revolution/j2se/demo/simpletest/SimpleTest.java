@@ -1,7 +1,6 @@
 package org.autumn.revolution.j2se.demo.simpletest;
 
 
-
 import org.autumn.revolution.j2se.demo.util.DESedeUtil;
 import org.autumn.revolution.j2se.demo.util.MD5Util;
 

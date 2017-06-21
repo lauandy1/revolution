@@ -4,7 +4,6 @@
        xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
        xmlns:cache="http://www.springframework.org/schema/cache" xmlns:mvc="http://www.springframework.org/schema/mvc"
        xmlns:task="http://www.springframework.org/schema/task" xmlns:util="http://www.springframework.org/schema/util"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 	         http://www.springframework.org/schema/beans/spring-beans.xsd
 	         http://www.springframework.org/schema/tx
@@ -39,9 +38,9 @@
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3307/revolution"/>
+        <property name="user" value="root"/>
+        <property name="password" value="root"/>
 
         <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="300" />
@@ -76,23 +75,8 @@
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
           p:dataSource-ref="dataSource" />
-    <tx:annotation-driven transaction-manager="transactionManager" order="200"/>
+    <tx:annotation-driven transaction-manager="transactionManager" />
 
     <context:component-scan base-package="org.autumn.revolution.web.dao" />
-
-    <!-- this is the aspect -->
-    <bean id="profiler" class="org.autumn.revolution.web.aspect.SimpleProfiler">
-        <!-- execute before the transactional advice (hence the lower order number) -->
-        <property name="order" value="1" />
-    </bean>
-
-    <aop:config>
-        <!-- this advice will execute around the transactional advice -->
-        <aop:aspect id="profilingAspect" ref="profiler">
-            <aop:pointcut id="serviceMethodWithReturnValue"
-                          expression="execution(!void org.autumn..*Service.*(..))"/>
-            <aop:around method="profile" pointcut-ref="serviceMethodWithReturnValue"/>
-        </aop:aspect>
-    </aop:config>
 
 </beans>
