@@ -1,7 +1,9 @@
 package org.autumn.revolution.j2se.demo.simpletest;
 
-import com.lauandy.j2se.util.DESedeUtil;
-import com.lauandy.j2se.util.MD5Util;
+
+
+import org.autumn.revolution.j2se.demo.util.DESedeUtil;
+import org.autumn.revolution.j2se.demo.util.MD5Util;
 
 import java.util.Random;
 

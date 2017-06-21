@@ -1,6 +1,7 @@
 package org.autumn.revolution.j2se.demo.classloader.example.bak;
 
-import com.lauandy.j2se.classloader.ICalculator;
+
+import org.autumn.revolution.j2se.demo.classloader.ICalculator;
 
 public class CalculatorBasic implements ICalculator {
 
