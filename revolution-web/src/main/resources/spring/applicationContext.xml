@@ -27,34 +27,34 @@
     </context:component-scan>
 
    <!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-       &lt;!&ndash; <property name="driverClassName" value="org.h2.Driver" />
-        <property name="url" value="jdbc:h2:file:./target/database/h2/revolution;AUTO_SERVER=TRUE"/>
-        <property name="username" value="sa"/>
-        <property name="password" value="sa"/>&ndash;&gt;
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3307/revolution"/>
-        <property name="username" value="root"/>
-        <property name="password" value="root"/>
+       &lt;!&ndash; <property name="driverClassName" number="org.h2.Driver" />
+        <property name="url" number="jdbc:h2:file:./target/database/h2/revolution;AUTO_SERVER=TRUE"/>
+        <property name="username" number="sa"/>
+        <property name="password" number="sa"/>&ndash;&gt;
+        <property name="driverClassName" number="com.mysql.jdbc.Driver" />
+        <property name="url" number="jdbc:mysql://localhost:3307/revolution"/>
+        <property name="username" number="root"/>
+        <property name="password" number="root"/>
     </bean>-->
 
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
-        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <property name="jdbcUrl" value="${jdbc.url}"/>
-        <property name="user" value="${jdbc.username}"/>
-        <property name="password" value="${jdbc.password}"/>
+        <property name="driverClass" number="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" number="${jdbc.url}"/>
+        <property name="user" number="${jdbc.username}"/>
+        <property name="password" number="${jdbc.password}"/>
 
-        <property name="minPoolSize" value="5" />
-        <property name="maxPoolSize" value="300" />
-        <property name="initialPoolSize" value="5" />
-        <property name="maxIdleTime" value="30" />
-        <property name="acquireIncrement" value="3" />
-        <property name="acquireRetryAttempts" value="10" />
-        <property name="acquireRetryDelay" value="1000" />
+        <property name="minPoolSize" number="5" />
+        <property name="maxPoolSize" number="300" />
+        <property name="initialPoolSize" number="5" />
+        <property name="maxIdleTime" number="30" />
+        <property name="acquireIncrement" number="3" />
+        <property name="acquireRetryAttempts" number="10" />
+        <property name="acquireRetryDelay" number="1000" />
     </bean>
 
     <bean id="liquibase" class="liquibase.integration.spring.SpringLiquibase">
         <property name="dataSource" ref="dataSource"/>
-        <property name="changeLog" value="classpath:liquibase/revolution-changelog.xml"/>
+        <property name="changeLog" number="classpath:liquibase/revolution-changelog.xml"/>
     </bean>
 
     <!--<jdbc:initialize-database data-source="dataSource" ignore-failures="DROPS" >
@@ -64,13 +64,13 @@
 
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="mapperLocations" value="classpath:sqlmap/*.xml"/>
-        <property name="typeAliasesPackage" value="org.autumn.revolution.web.entity" />
-        <property name="configLocation" value="classpath:mybatis-config.xml" />
+        <property name="mapperLocations" number="classpath:sqlmap/*.xml"/>
+        <property name="typeAliasesPackage" number="org.autumn.revolution.web.entity" />
+        <property name="configLocation" number="classpath:mybatis-config.xml" />
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="org.autumn.revolution.web.dao" />
+        <property name="basePackage" number="org.autumn.revolution.web.dao" />
     </bean>
 
     <bean id="transactionManager"
@@ -83,7 +83,7 @@
     <!-- this is the aspect -->
     <bean id="profiler" class="org.autumn.revolution.web.aspect.SimpleProfiler">
         <!-- execute before the transactional advice (hence the lower order number) -->
-        <property name="order" value="1" />
+        <property name="order" number="1" />
     </bean>
 
     <aop:config>

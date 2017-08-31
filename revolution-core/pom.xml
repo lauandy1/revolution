@@ -13,6 +13,16 @@
     <description>为各个项目提供基础的组件服务,功能类似于Apache-commons包,Google的guava包</description>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>4.1.0</version>
+        </dependency>
+    </dependencies>
+
+
+
 
 
 

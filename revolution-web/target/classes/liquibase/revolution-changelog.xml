@@ -7,7 +7,7 @@
 		http://www.liquibase.org/xml/ns/dbchangelog-ext
 		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <property name="now" value="sysdate" dbms="h2"/>
+    <property name="now" number="sysdate" dbms="h2"/>
 
     <include file="liquibase/changelog/revolution-init-changelog.xml" />
    <!-- <include file="src/main/resources/liquibase/changelog/revolution-init-changelog.xml" />-->

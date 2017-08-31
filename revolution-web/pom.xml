@@ -187,13 +187,38 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
+			<!--<plugin>-->
+				<!--<groupId>org.mortbay.jetty</groupId>-->
+				<!--<artifactId>jetty-maven-plugin</artifactId>-->
+				<!--<configuration>-->
+					<!--<connectors>-->
+						<!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
+							<!--<port>9011</port>-->
+							<!--<maxIdleTime>60000</maxIdleTime>-->
+						<!--</connector>-->
+					<!--</connectors>-->
+					<!--<reload>automatic</reload>-->
+					<!--<scanIntervalSeconds>0</scanIntervalSeconds>-->
+					<!--<systemProperties>-->
+						<!--<systemProperty>-->
+							<!--<name>org.mortbay.util.URI.charset</name>-->
+							<!--<number>UTF-8</number>-->
+						<!--</systemProperty>-->
+					<!--</systemProperties>-->
+					<!--<jvmArgs>-Xmx512m -XX:PermSize=128m -XX:MaxPermSize=256m-->
+						<!-- -Dfile.encoding=UTF-8-->
+					<!--</jvmArgs>-->
+					<!--<stopKey/>-->
+					<!--<stopPort/>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
 				<artifactId>jetty-maven-plugin</artifactId>
 				<configuration>
 					<connectors>
 						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>9011</port>
+							<port>8092</port>
 							<maxIdleTime>60000</maxIdleTime>
 						</connector>
 					</connectors>
@@ -206,10 +231,7 @@
 						</systemProperty>
 					</systemProperties>
 					<jvmArgs>-Xmx512m -XX:PermSize=128m -XX:MaxPermSize=256m
-						-Dfile.encoding=UTF-8
-					</jvmArgs>
-					<stopKey/>
-					<stopPort/>
+						-Dfile.encoding=UTF-8</jvmArgs>
 				</configuration>
 			</plugin>
 

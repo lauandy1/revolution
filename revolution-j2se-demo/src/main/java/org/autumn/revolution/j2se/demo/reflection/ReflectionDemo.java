@@ -35,7 +35,7 @@ public class ReflectionDemo {
             String name = (String)method.invoke(new ReflectionDemo(),null);
             System.out.println(name);
 
-            Method method1 = clazz.getDeclaredMethod("getValue", new Class[]{String.class});
+            Method method1 = clazz.getDeclaredMethod("getNumber", new Class[]{String.class});
             //method1.setAccessible(true);
             String value = (String)method1.invoke(new ReflectionDemo(),"testValue");
             System.out.println(value);

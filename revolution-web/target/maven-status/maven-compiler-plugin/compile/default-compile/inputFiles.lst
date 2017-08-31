@@ -1,4 +1,7 @@
-C:\Users\yangzhic\git\revolution\revolution-web\src\main\java\org\autumn\revolution\web\dao\UserDao.java
-C:\Users\yangzhic\git\revolution\revolution-web\src\main\java\org\autumn\revolution\web\controller\UserController.java
-C:\Users\yangzhic\git\revolution\revolution-web\src\main\java\org\autumn\revolution\web\entity\User.java
-C:\Users\yangzhic\git\revolution\revolution-web\src\main\java\org\autumn\revolution\web\service\UserService.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/redis/IRedisService.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/aspect/SimpleProfiler.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/controller/UserController.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/redis/impl/RedisService.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/service/UserService.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/entity/User.java
+/Users/yangzhichao/Documents/git/revolution/revolution-web/src/main/java/org/autumn/revolution/web/dao/UserDao.java
