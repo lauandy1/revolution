@@ -13,4 +13,14 @@
     <description>java基础语法、特性等示例代码</description>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.12.1.GA</version>
+        </dependency>
+    </dependencies>
+
+
+
 </project>
