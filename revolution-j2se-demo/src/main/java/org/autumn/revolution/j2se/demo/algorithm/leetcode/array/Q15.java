@@ -1,27 +1,13 @@
 package org.autumn.revolution.j2se.demo.algorithm.leetcode.array;
 
-<<<<<<< HEAD
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-/**
- * Created by yangzhichao on 19/10/29.
-=======
-import com.alibaba.fastjson.JSON;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * created by yangzhichao on 2019/11/2
->>>>>>> 570e375152af0e9a953735e10a3345fe50674698
  */
 public class Q15 {
 
 
-<<<<<<< HEAD
     /**
      * 求出数组内三元组的和为0的组合，要求组合数字不重复
      * 基本思路：1.首先遍历数组把数组值和位置关系保存到map
@@ -52,12 +38,7 @@ public class Q15 {
      * @param nums
      * @return
      */
-    public List<List<Integer>> threeSum2(int[] nums) {
-
-
-        return null;
-=======
-    public static List<List<Integer>> threeSum(int[] nums) {
+    public static List<List<Integer>> threeSum2(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         if(nums == null || nums.length < 3){
             return result;
@@ -102,8 +83,7 @@ public class Q15 {
         //int[] nums = new int[] {-1,0,1,2,-1,-4};
 
         //int[] nums2 = new int[] {-4, -1, -1, 0, 1, 2};
-        System.out.println(JSON.toJSONString(threeSum(nums)));
+        //System.out.println(JSON.toJSONString(threeSum(nums)));
 
->>>>>>> 570e375152af0e9a953735e10a3345fe50674698
     }
 }
