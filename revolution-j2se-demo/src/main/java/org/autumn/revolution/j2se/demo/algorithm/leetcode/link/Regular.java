@@ -3,7 +3,7 @@ package org.autumn.revolution.j2se.demo.algorithm.leetcode.link;
 /**
  * created by yangzhichao on 2019/12/8
  */
-public class Q206 {
+public class Regular {
 
     public static ListNode reverseList(ListNode head) {
 
