@@ -36,6 +36,10 @@ public class BinTree {
         this.root = new BinNode(1, node21, node22);
     }
 
+    public void createTree2(){
+        
+    }
+
     public void midOrder(BinNode root){
         if(root.getLeft() != null){
             midOrder(root.getLeft());

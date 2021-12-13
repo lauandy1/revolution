@@ -44,7 +44,7 @@ public class CyclicBarrierDemo extends Thread {
             CyclicBarrierDemo graunt = new CyclicBarrierDemo(cb);
             graunt.start();
         }
-        cb.getNumberWaiting();
+        //cb.getNumberWaiting();
 
     }
 }
