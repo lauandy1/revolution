@@ -7,7 +7,7 @@ import com.alibaba.fastjson.JSON;
  * Author: yangzhichao
  * Date: 2021/3/2
  */
-public class SortDemo {
+public class MergeSortDemo {
 
     public static void mergeSort(int[] src){
         mergeSort(src, 0, src.length - 1);
