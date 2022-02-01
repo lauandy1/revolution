@@ -1,5 +1,7 @@
 package org.autumn.revolution.j2se.demo.concurrent;
 
+import java.util.concurrent.locks.LockSupport;
+
 /**
  * Created by yangzhichao on 15/10/11.
  */
@@ -7,7 +9,7 @@ public class PrintABC {
 
     public static String flag = "A";
 
-    public static void main(String[] args) {
+    public static void print1(){
         final Object monitor = new Object();
 
         new Thread(
@@ -75,5 +77,22 @@ public class PrintABC {
                     }
                 }
         ).start();
+    }
+
+    /**
+     * 第二种方式，用lockSupport
+     */
+    public static void print2(){
+        Thread t1 = new Thread(() -> {
+            for(int i = 0; i < 10; i++){
+                System.out.println("第" + i + "遍：A");
+                LockSupport.park();
+
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+
     }
 }
